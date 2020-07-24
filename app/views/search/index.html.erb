@@ -1,0 +1,13 @@
+<h1>Nearest Station</h1>
+
+<h2><%= @station.name %></h2>
+<p><%= @station.address %></p>
+<p><%= @station.fuel_type %></p>
+<p><%= @station.access_times %></p>
+
+<h2>Directions</h2>
+<p><%= @directions.distance.round(1) %> miles</p>
+<p>travel time: <%= @directions.travel_time %></p>
+<% @directions.instructions.each do |direction| %>
+  <p><%= direction[:narrative] %></p>
+<% end %>
